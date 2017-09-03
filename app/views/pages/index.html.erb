@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-lg-8">
+
+        <!-- Blog Post -->
+
+        <!-- Title -->
+<div class="jumbotron">
+  <h1>Welcome to Steve's Articles.  </h1>
+  <p>Awesome applications built with Rails!</p>
+  <p></p>
+</div>
+
+       
+
+
+    </div>
+
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+
+        <!-- Blog Categories Well -->
+
+
+        <!-- Side Widget Well -->
+        <div class="well">
+          <h4>Recent Posts</h4>
+            <% @articles.each do |a| %>
+              Created by: <%= a.user.username %><br />
+              <strong><%= link_to a.title, a %></strong>
+              <p><%= truncate(a.body) %></p>
+            <% end %>
+        </div>
+
+    </div>
+
+</div>
+<!-- /.row -->
+
+<hr>
